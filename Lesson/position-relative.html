@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: relative</title>
+    <style>
+      .relative {
+        background-color: blue;
+        color: white;
+        position: relative;
+        left: 30px;
+        bottom: 42px;
+        /* le proprietà sono top, bottom, left e right */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>POSITION: RELATIVE</h2>
+      <p>
+        Il valore "relative" permette di posizionare un elemento "RELATIVAMENTE"
+        alla posizione che avrebbe assunto normalmente se avesse avuto il valore
+        "static". Per scostare l'elemento dalla sua posizione naturale possiamo
+        utilizzare 4 proprietà: top, bottom, left, right. Un elemento
+        posizionato con queste 4 proprietà si ritrova RIMOSSO dal normale flow
+        della pagina! Sarà possibile sovrapporre gli elementi, renderli
+        illeggibili, far sparire le cose... NON deve essere abusato! Non
+        utilizzate queste proprietà per creare layout.
+      </p>
+      <article>
+        <p class="relative">Questo p è posizionato con position: relative.</p>
+      </article>
+    </main>
+  </body>
+</html>

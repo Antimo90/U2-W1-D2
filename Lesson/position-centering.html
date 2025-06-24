@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrare gli elementi con position</title>
+    <style>
+      .relative {
+        width: 400px;
+        height: 400px;
+        background-color: aquamarine;
+        position: relative;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        Un utilizzo comunissimo del binomio position: relative / position:
+        absolute riguarda la possibilità di centrare un elemento
+        (orizzontalmente ma anche verticalmente) all'interno di un contenitore.
+        Si concretizza nello spostare l'elemento contenuto del 50% dall'alto e
+        del 50% da sinistra, e successivamente ri-spostarsi in alto a sx di una
+        quantità di spazio dimezzata rispetto al proprio ingombro.
+      </p>
+      <article>
+        <div class="relative">
+          <span class="absolute">TESTO CENTRATO</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

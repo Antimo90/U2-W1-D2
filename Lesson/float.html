@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proprietà FLOAT in CSS</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FLOAT in CSS</h1>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CORSI</a></li>
+          <li><a href="#">DOCENTI</a></li>
+          <li><a href="#">DOVE SIAMO</a></li>
+          <li><a href="#">CAREERS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- impostando su questo aside la proprietà "float: left" rimuoviamo
+         questo elemento dal normale "flusso" degli elementi -->
+      <!-- questo comporta anche che l'elemento con float NON contribuisce più
+          all'altezza del suo contenitore -->
+
+      <aside id="left">
+        <img src="https://placebear.com/200/200" alt="teddy" />
+      </aside>
+
+      <aside id="right">
+        <img src="https://placebear.com/200/200" alt="teddy" />
+      </aside>
+
+      <!-- questa section ora comincia a svilupparsi intorno all'immagine dell'orso,
+       evitando che il testo ci finisca sopra -->
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          enim possimus tenetur vel officia asperiores, cum optio repellendus
+          ea. Natus iusto eos quibusdam ad maxime cum numquam unde, nihil
+          impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem enim possimus tenetur vel officia asperiores, cum optio
+          repellendus ea. Natus iusto eos quibusdam ad maxime cum numquam unde,
+          nihil impedit!
+        </p>
+      </section>
+    </main>
+    <!-- anche il footer sta circondando l'immagine! questo perchè, a meno di 
+     impostare un "clear", TUTTO il contenuto successivo cercherà di disporsi
+     attorno all'elemento "flottante" -->
+    <footer>
+      <p>EPICODE - <span id="year"></span></p>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

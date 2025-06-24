@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: absolute</title>
+    <style>
+      .absolute {
+        background-color: green;
+        color: white;
+        margin: 0;
+        /* le proprietà sono top, bottom, left e right */
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        /* l'ho spostato in basso a dx */
+      }
+
+      .card {
+        width: 250px;
+        height: 180px;
+        border: 1px solid black;
+        background-color: blueviolet;
+        color: white;
+        position: relative;
+      }
+
+      .badge {
+        width: 50px;
+        height: 25px;
+        background-color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        position: absolute;
+        right: -25px;
+        top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>POSITION: ABSOLUTE</h2>
+      <p>
+        Il valore "absolute" ci permetterà di posizionare un elemento in maniera
+        ASSOLUTA: di default, il riferimento assoluto saranno i bordi del
+        documento. Ricorda inoltre che un elemento dotato di position absolute
+        NON contribuirà più all'altezza del suo contenitore (un po' come con
+        float...).
+      </p>
+      <article>
+        <p class="absolute">Questo p è posizionato con position: absolute.</p>
+      </article>
+      <section>
+        <div class="card">
+          <div class="badge">NEW!</div>
+        </div>
+      </section>
+      <p>
+        Un trucco famosissimo prevede l'utilizzo di un elemento in absolute
+        DENTRO un elemento in relative: questo trasformerà i punti di
+        riferimento dell'elemento in absolute, che non saranno più i bordi del
+        documento, ma diventeranno i bordi del suo contenitore relative. Il
+        contenitore in relative potrebbe essere suo padre, suo nonno o un
+        antenato a qualsiasi livello; nel caso non ne trovasse nessuno,
+        prenderebbe come riferimento i bordi della pagina. L'elemento antenato
+        potrebbe in realtà avere un QUALSIASI valore di position che non sia
+        "static".
+      </p>
+      <!-- <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+        tenetur distinctio numquam molestiae quibusdam magni, reiciendis nihil
+        vero necessitatibus esse veniam quas illum architecto dicta at eaque
+        velit illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Possimus tenetur distinctio numquam molestiae quibusdam magni,
+        reiciendis nihil vero necessitatibus esse veniam quas illum architecto
+        dicta at eaque velit illo qui! Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Possimus tenetur distinctio numquam molestiae
+        quibusdam magni, reiciendis nihil vero necessitatibus esse veniam quas
+        illum architecto dicta at eaque velit illo qui! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Possimus tenetur distinctio numquam
+        molestiae quibusdam magni, reiciendis nihil vero necessitatibus esse
+        veniam quas illum architecto dicta at eaque velit illo qui! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Possimus tenetur
+        distinctio numquam molestiae quibusdam magni, reiciendis nihil vero
+        necessitatibus esse veniam quas illum architecto dicta at eaque velit
+        illo qui!
+      </p> -->
+    </main>
+  </body>
+</html>

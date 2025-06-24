@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  border: 1px solid black;
+}
+
+#left {
+  float: left;
+  /* spazio un po' il testo a dx */
+  margin-right: 1em;
+}
+
+#right {
+  float: right;
+}
+
+main section {
+  /* inserisco un po' di padding a dx per compensare il margine di sx */
+  padding-right: 1em;
+}
+
+footer {
+  /* ripristino la normalità resettando il float con un clear dotato 
+    dello stesso valore */
+  clear: left;
+}
