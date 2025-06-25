@@ -27,6 +27,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 7px;
+  z-index: 2;
 }
 
 @media screen and (min-width: 800px) {
@@ -187,6 +190,7 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 ul,
 ol {
@@ -385,4 +389,62 @@ footer a {
   .toTop {
     display: none;
   }
+}
+
+/* INSERIMENTO MODIFICHE MOBILE */
+.containerTitle{
+  height: 150px;
+  position: relative;
+}
+.title{
+  position: absolute;
+  z-index: 1;
+}
+
+.underline{
+  width: 100%;
+  position: absolute;
+  bottom: 18px;
+  z-index: 0;
+  opacity: 0.5; 
+}
+
+.grayWords{
+  color: gray;
+}
+
+.secondContainer{
+  position: relative;
+  height: 200px;
+
+}
+
+.novita{
+  position: absolute;
+  top: -20px;
+}
+
+/* Pulsante Torna in Cima */
+.back-to-top {
+  position: fixed; /* Rende il pulsante fisso sullo schermo */
+  bottom: 20px; /* Distanza dal bordo inferiore della viewport */
+  right: 20px; /* Distanza dal bordo destro della viewport */
+  background-color: #8A2BE2; /* Colore violetto */
+  color: white; /* Colore bianco dell'icona */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Lo rende un cerchio */
+  display: flex; /* Centra l'icona */
+  justify-content: center; /* Centra l'icona orizzontalmente */
+  align-items: center; /* Centra l'icona verticalmente */
+  font-size: 24px; /* Regola la dimensione dell'icona */
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge una sottile ombra */
+  z-index: 1000; /* Assicura che il pulsante sia sopra gli altri contenuti */
+  opacity: 0; /* Inizialmente nascosto */
+  
+}
+
+.back-to-top:hover {
+  background-color: #6A1AAB; /* Violetto leggermente più scuro al passaggio del mouse */
 }
